@@ -1,0 +1,175 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/background.webp'); /* Replace with your background image */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Game container */
+.game-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Title image */
+.title-image {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+.button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Individual button colors */
+.button.new-game {
+    background-color: #4b0082;
+}
+
+.button.continue {
+    background-color: #4b0082;
+}
+
+.button.score-board {
+    background-color: #32cd32;
+}
+
+/* Hover effects */
+.button.new-game:hover {
+    background-color: #3a0066; /* Darker shade of purple */
+}
+
+.button.continue:hover {
+    background-color: #3a0066; /* Darker shade of purple */
+}
+
+.button.score-board:hover {
+    background-color: #28a428; /* Darker shade of green */
+}
+/* Profile container for new-profile.html */
+
+
+.profile-content {
+    
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    height: 550px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    
+}
+
+.profile-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.profile-content label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.profile-content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.create-profile {
+    background-color: #4b0082;
+    padding: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    
+    
+}
+
+.create-profile:hover {
+    background-color: #3a0066; /* Darker shade on hover */
+}
+
+.continue-profile{
+    background-color: #4b0082;
+    padding: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+.continue-profile:hover {
+    background-color: #3a0066; /* Darker shade on hover */
+}
+
+.continue-content {
+      background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.continue-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.continue-content label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.continue-content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+

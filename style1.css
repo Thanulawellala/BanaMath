@@ -1,0 +1,222 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('images/background.webp');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Game Container */
+.game-container {
+    background-color: rgba(242, 240, 80, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height :100%;
+    max-width: 1500px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.health-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.health-bar .heart {
+    width: 40px;
+    height: 40px;
+    background: url('images/299063_heart_icon.png') no-repeat center / contain;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.score{
+    background: #24e973;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.question-number{
+    background: #b7e708;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.timer {
+    background: #e70808;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: heartbeat 1s infinite;
+}
+
+/* Puzzle Box Section */
+/* Puzzle Container Styling */
+.puzzle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    /* Full viewport width */
+    background-color: rgba(255, 255, 255,); /* Adjust as needed for your game background */
+}
+
+/* Puzzle Box Styling */
+.puzzle-box {
+    width: 660px;
+    height: 360px;
+    background-color: #fff; /* White background for the puzzle box */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border-radius: 15px; /* Rounded corners for a fun look */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Crop oversized content */
+}
+
+/* Puzzle Image Styling */
+.puzzle-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the image fits nicely */
+}
+
+
+/* Answer Section */
+.answer-container {
+    background: #e0f7fa;
+    border: 3px solid #00bcd4;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.answer-container label {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.answer-container input {
+    width: 70%;
+    padding: 15px;
+    font-size: 20px;
+    border: 3px solid #009688;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    color: #004d40;
+}
+
+.answer-container input:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 8px rgba(0, 121, 107, 0.8);
+}
+
+.answer-container .button {
+    background: linear-gradient(90deg, #f44336, #e91e63);
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.answer-container .button:hover {
+    background: linear-gradient(90deg, #d32f2f, #c2185b);
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .header .score,
+    .header .question-number,
+    .header .timer {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    .puzzle-box {
+        height: 300px;
+    }
+
+    .answer-container input {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .answer-container .button {
+        font-size: 18px;
+    }
+}
