@@ -1,5 +1,8 @@
 <!-- new-profile.html -->
-
+<?php
+session_start();
+require_once 'connection.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +15,7 @@
     <div class="profile-container">
         <div class="continue-content">
             <h2>Log In</h2>
-            <!-- Form starts here -->
+            
             <form action="signin_profile.php" method="POST"  onsubmit="return validateForm1()">
                 <label for="playerName">Player Name</label>
                 <input type="text" id="playerName" name="playerName" placeholder="Enter Player Name" required>
@@ -22,7 +25,7 @@
                 
                 <button type="submit" name="login_submit" class="button continue-profile">Continue</button>
             </form>
-            <!-- Form ends here -->
+            
         </div>
     </div>
     <script src="script.js"></script>

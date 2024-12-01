@@ -1,14 +1,14 @@
-/* Basic reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Background styling */
+
 body {
     font-family: Arial, sans-serif;
-    background-image: url('images/background.webp'); /* Replace with your background image */
+    background-image: url('images/background.webp'); 
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@ body {
     height: 100vh;
 }
 
-/* Game container */
+
 .game-container {
     text-align: center;
     padding: 20px;
@@ -25,14 +25,14 @@ body {
     max-width: 500px;
 }
 
-/* Title image */
+
 .title-image {
     width: 100%;
     max-width: 1000px;
     margin-bottom: 20px;
 }
 
-/* Button styles */
+
 .button {
     display: block;
     width: 100%;
@@ -44,10 +44,10 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease; 
 }
 
-/* Individual button colors */
+
 .button.new-game {
     background-color: #4b0082;
 }
@@ -60,19 +60,19 @@ body {
     background-color: #32cd32;
 }
 
-/* Hover effects */
+
 .button.new-game:hover {
-    background-color: #3a0066; /* Darker shade of purple */
+    background-color: #3a0066; 
 }
 
 .button.continue:hover {
-    background-color: #3a0066; /* Darker shade of purple */
+    background-color: #3a0066; 
 }
 
 .button.score-board:hover {
-    background-color: #28a428; /* Darker shade of green */
+    background-color: #28a428; 
 }
-/* Profile container for new-profile.html */
+
 
 
 .profile-content {
@@ -123,7 +123,7 @@ body {
 }
 
 .create-profile:hover {
-    background-color: #3a0066; /* Darker shade on hover */
+    background-color: #3a0066; 
 }
 
 .continue-profile{
@@ -137,7 +137,7 @@ body {
 
 }
 .continue-profile:hover {
-    background-color: #3a0066; /* Darker shade on hover */
+    background-color: #3a0066; 
 }
 
 .continue-content {

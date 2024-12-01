@@ -1,11 +1,11 @@
-/* Reset Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-image: url('images/background.webp');
@@ -31,7 +31,7 @@ body {
     gap: 20px;
 }
 
-/* Header Section */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -45,6 +45,12 @@ body {
 }
 
 .health-bar .heart {
+    width: 40px;
+    height: 40px;
+    background: url('images/299063_heart_icon.png') no-repeat center / contain;
+    animation: heartbeat 1s infinite;
+}
+.heart {
     width: 40px;
     height: 40px;
     background: url('images/299063_heart_icon.png') no-repeat center / contain;
@@ -96,38 +102,38 @@ body {
 }
 
 /* Puzzle Box Section */
-/* Puzzle Container Styling */
+
 .puzzle-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    /* Full viewport width */
+    height: 100vh; 
+    
     background-color: rgba(255, 255, 255,); /* Adjust as needed for your game background */
 }
 
-/* Puzzle Box Styling */
+
 .puzzle-box {
     width: 660px;
     height: 360px;
-    background-color: #fff; /* White background for the puzzle box */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-    border-radius: 15px; /* Rounded corners for a fun look */
+    background-color: #fff; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 15px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Crop oversized content */
+    overflow: hidden; 
 }
 
-/* Puzzle Image Styling */
+
 .puzzle-box img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Ensures the image fits nicely */
+    object-fit: contain; 
 }
 
 
-/* Answer Section */
+
 .answer-container {
     background: #e0f7fa;
     border: 3px solid #00bcd4;
@@ -193,7 +199,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .game-container {
         padding: 15px;
@@ -219,4 +225,117 @@ body {
     .answer-container .button {
         font-size: 18px;
     }
+}
+/* General modal styling */
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+/* Modal content container */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: yellow; /* Dark background to match the game */
+    color: black; /* White text for contrast */
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Attractive shadow */
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #f44336; /* Bright red on hover */
+}
+
+/* Game over message styling */
+#gameOverMessage {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: textGlow 1.5s infinite; /* Glow effect */
+}
+
+/* Final score message styling */
+#finalScoreMessage {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #f44336, 0 0 20px #f44336;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #f44336, 0 0 30px #f44336;
+    }
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #f44336, 0 0 20px #f44336;
+    }
+}
+
+
+/* Toast Styles */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Inline Notification Styles */
+.notification {
+    background-color: #f9ed69;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    visibility: hidden;
 }
