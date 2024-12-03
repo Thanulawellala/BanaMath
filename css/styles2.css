@@ -1,0 +1,221 @@
+body {
+    font-family: 'Arial, sans-serif';
+    background-image: url('../images/background.webp');
+    background-color: #fefae0; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; 
+}
+
+#leaderboard-container {
+    width: 700px; 
+    background-color: transparent; 
+    border-radius: 20px;
+    height: fit-content;
+    padding: 40px;
+    text-align: center;
+    
+    overflow: hidden; 
+}
+
+
+h1 {
+    font-size: 40px; 
+    color: blue; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    margin-bottom: 30px; 
+    background: linear-gradient(45deg, black, black); 
+    -webkit-background-clip: text; 
+    color: transparent; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 10px 0; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+h1:hover {
+    transform: scale(1.1); 
+    color: black; 
+}
+
+.leaderboards {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leaderboards .header {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px; 
+    color: #5d4037; 
+    margin-bottom: 15px;
+    border-bottom: 2px solid #5d4037; 
+    padding-bottom: 10px;
+}
+
+.leaderboards li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px; 
+    color: #5d4037; 
+    margin: 10px 0; 
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.leaderboards li:hover {
+    background-color: #f1e3c7; 
+}
+
+button {
+    background-color: #673ab7; 
+    color: white;
+    border: none;
+    padding: 15px 30px; 
+    font-size: 20px; 
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #512da8; 
+}
+
+.leaderboards li.highlight {
+    background-color: #ffeb3b; 
+    color: #000; 
+    font-weight: bold; 
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+ul.leaderboard {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: large;
+}
+
+ul.leaderboard li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 0;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+li.header {
+    font-weight: bold;
+    color: #333;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.player-position, .player-name, .player-score {
+    font-size: 16px;
+    color: #333;
+    padding: 5px;
+    font-size: medium;
+}
+
+.player-position {
+    width: 30px; 
+    text-align: center;
+    font-size: large;
+}
+
+.player-name {
+    text-align: left;
+    font-size: large;
+    
+}
+
+.player-score {
+    text-align: right;
+    font-size: large;
+}
+
+li.highlight {
+    background-color: #ffd700; 
+    font-weight: bold;
+}
+
+li:not(.header) {
+    background-color: #f9f9f9;
+}
+
+.play-again-container {
+    margin-top: 20px;  
+    text-align: center;
+}
+
+.play-again-container button {
+    background-color: #673ab7;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.play-again-container button:hover {
+    background-color: #512da8; 
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+
+.logout-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c62828;
+}
+
+
+button {
+    background-color: #673ab7; 
+    color: white;
+    border: none;
+    padding: 12px 30px; 
+    font-size: 18px; 
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #512da8; 
+}
+a {
+    text-decoration: none; 
+}

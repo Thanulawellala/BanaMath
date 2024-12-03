@@ -6,7 +6,7 @@ session_destroy();
 
 if(!isset($_SESSION["PID"])){
 
-    header("Location: bana.html");
+    header("Location: banahome.php");
   
   }
 

@@ -8,7 +8,7 @@ require_once 'connection.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banana Math Game</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="css/style1.css">
     <script src="gamescript.js" defer></script>
 </head>
 <body>
@@ -24,12 +24,12 @@ require_once 'connection.php';
             <div class="score">Score: 0</div>
             <div class="timer">Time Remaining: 20</div>
             <div class="question-number">Q1</div>
-            <div class="question-number"><a href="logout.php">Log out</div></a>
+            <div class="logout"><a href="logout.php">Log out</div></a>
             
 
         </div>
     
-        <!-- Puzzle Box -->
+        
         <div class="puzzle-container">
             <div class="puzzle-box">
                 <img id="puzzle-image" src="puzzle-image.png" alt="Puzzle Image" />
@@ -44,7 +44,7 @@ require_once 'connection.php';
             <button class="button">Submit Answer</button>
         </div>
     </div>
-    <!-- Modal for Game Over or Notifications -->
+    
     <div id="gameOverModal" class="modal">
     <div class="modal-content">
         <span class="close-button" onclick="closeModal()">&times;</span>
@@ -55,13 +55,11 @@ require_once 'connection.php';
 
 </div>
 
-<!-- Toast for instant notifications -->
+
 <div id="toast" class="toast">
     <p id="toastMessage"></p>
 </div>
 
-<!-- Inline Notification -->
-<div id="notification" class="notification"></div>
 
     
 </body>

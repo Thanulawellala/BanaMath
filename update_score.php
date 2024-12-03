@@ -6,16 +6,16 @@ if (!isset($_SESSION['playerId'])) {
 require_once 'connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Check if the player is logged in
+    
     if (!isset($_SESSION['playerId'])) {
         echo json_encode(['success' => false, 'message' => 'Player not logged in']);
         exit();
     }
 
     $playerId = $_SESSION['playerId'];
-    $finalScore = intval($_POST['score']); // Get the score from the POST request
+    $finalScore = intval($_POST['score']); 
 
-    // Update the score in the database
+    
     $sql = "UPDATE `player` SET `score` = GREATEST(`score`, $finalScore) WHERE `PID` = $playerId";
 
     if ($conn->query($sql) === TRUE) {

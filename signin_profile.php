@@ -17,23 +17,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_submit'])) {
         $_SESSION['playerId'] = $playerId;
         $_SESSION['playerName'] = $playerName; 
 
-        echo "<script>
-            alert('Welcome, $playerName!');
-            window.location.href='gamescreen.php';
-        </script>";
+        header("Location: gamescreen.php");
         exit();
     } else {
         
         echo "<script>
             alert('Invalid username or password. Please try again.');
-            window.location.href='continue.html';
+            window.location.href='continue.php';
         </script>";
     }
 
     $conn->close();
 } else {
     
-    header("Location: continue.html");
+    header("Location: continue.php");
     exit();
 }
 ?>
