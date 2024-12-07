@@ -1,3 +1,7 @@
+//chatgpt
+//help from collegues
+//github
+
 let timer;
 let initialTime = 90; 
 let timeLeft = initialTime;
@@ -28,7 +32,7 @@ async function fetchImage() {
         puzzleImage.src = imageUrl;  
 
     } catch (error) {
-        console.error('Error fetching image:', error);
+        console.error('Error fetching image:', error);  
     }
 }
 
@@ -92,7 +96,7 @@ function checkAnswer() {
         document.querySelector('.question-number').innerText = `Q${questionNumber}`;
         reduceLifeByWrongAnswer();
     }
-    updateScoreAndLives();
+    updateScoreAndLives();  
 }
 
 
@@ -187,7 +191,7 @@ function showGameOverModal() {
     message.innerText = `Game Over! Your final score is:`;
     scoreMessage.innerText = score;
 
-    modal.style.display = "block"; 
+    modal.style.display = "block";   
 
      
     setTimeout(() => {
@@ -208,10 +212,33 @@ function showToast(message) {
     toastMessage.innerText = message;
     toast.classList.add('show');
     setTimeout(() => {
-        toast.classList.remove('show');
+        toast.classList.remove('show'); 
     }, 3000);
 }
+function checkLoginStatus() {
+    const playerName = getCookie('playerName');
+    if (!playerName) {
+        alert("You are not logged in. Redirecting to login page.");
+        window.location.href = 'continue.php';
+    } else {
+        console.log(`Welcome back, ${playerName}!`);
+    }
+}
+
+function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.indexOf(name + "=") == 0) {
+            return cookie.substring(name.length + 1, cookie.length);
+        }
+    }
+    return null;
+}
+
+window.onload = checkLoginStatus;
 
 
 document.addEventListener('DOMContentLoaded', initializeGame);
+
 

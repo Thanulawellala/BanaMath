@@ -1,4 +1,7 @@
 <?php
+
+// chatgpt
+// github
 session_start();
 require_once 'connection.php'; 
 
@@ -20,20 +23,20 @@ $result = $conn->query($sql);
     <script src="script1.js" defer></script>
 </head>
 <body>
-    <div id="leaderboard-container">
+    <div id="leaderboard-container"> 
         
         <h1>Top Score Board</h1>
         <?php
         if ($result && $result->num_rows > 0) {
             echo '<ul class="leaderboards">';
 
-            // Table header
+            
             echo '<li class="header"><span class="player-position">#</span><span class="player-name">Player</span><span class="player-score">Score</span></li>';
 
-            // Loop through leaderboard data
+            
             $position = 1;
             while ($row = $result->fetch_assoc()) {
-                // Check if the logged-in player is in the leaderboard
+                
                 $isLoggedInPlayer = ($row['PID'] == $loggedInPlayerId);
                 
                 echo '<li class="' . ($isLoggedInPlayer ? 'highlight' : '') . '">';

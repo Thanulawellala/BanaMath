@@ -1,6 +1,13 @@
 <?php
 session_start();
 require_once 'connection.php'; 
+if (!isset($_COOKIE['playerId']) || !isset($_COOKIE['playerName'])) {
+    header("Location: continue.php"); 
+    exit();
+}
+
+$playerId = $_COOKIE['playerId'];
+$playerName = $_COOKIE['playerName'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

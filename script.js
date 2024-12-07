@@ -1,3 +1,6 @@
+// chatgpt
+// projects done in previous year
+
 function openProfileModal() {
     document.getElementById("profileModal").style.display = "flex";
 }

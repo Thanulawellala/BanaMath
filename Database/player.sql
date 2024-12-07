@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2024 at 03:03 PM
+-- Generation Time: Dec 03, 2024 at 08:26 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `player` (
   `PID` int(11) NOT NULL,
   `pname` varchar(200) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `score` int(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -39,11 +39,10 @@ CREATE TABLE `player` (
 --
 
 INSERT INTO `player` (`PID`, `pname`, `password`, `score`) VALUES
-(4, 'Alex', 'test1', 25),
-(5, 'Ryan', '123', 10),
-(6, 'Brian', '12345', 0),
-(7, 'Liam', 'test1', 0),
-(8, 'Nihal', '1234', 20);
+(17, 'John', '$2y$10$1SQqTrO5BkoNlyBJgiC0j.NoEvV3r5j9luud/pB2K1cUOKhSHjrlO', 40),
+(19, 'Ryan', '$2y$10$otHvkXZsPgPeZ03gzbfireN0sp.TJ.kgPE6ZqjJMOp/1NGQkSCPgC', 30),
+(20, 'Alex', '$2y$10$eY/h52EAEKn8MjZ9yQj7neC3ahKE0MVvDLKsnaW50irbjBTOCL9WK', 25),
+(21, 'Thanula', '$2y$10$N4ovz197fmevyJvP6PPGYOWe/cwR/mKHfs.GoL.P7fyND9gbHwMye', 0);
 
 --
 -- Indexes for dumped tables
@@ -63,7 +62,7 @@ ALTER TABLE `player`
 -- AUTO_INCREMENT for table `player`
 --
 ALTER TABLE `player`
-  MODIFY `PID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `PID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const leaderboardContainer = document.getElementById('leaderboard-container'); 
 
-    fetch('leaderboardfront.php')
+    fetch('leaderboardfront.php')  //chatgpt
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not OK');

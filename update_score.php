@@ -1,4 +1,7 @@
 <?php
+
+//chatgpt
+
 session_start();
 if (!isset($_SESSION['playerId'])) {
     echo json_encode(['success' => false, 'message' => 'Player ID not found in session']);
